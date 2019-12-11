@@ -1,0 +1,10 @@
+---
+- name: Test my new Module on Ansible
+  hosts: localhost
+  tasks:
+  -  name: run the new Module
+     try:
+     register: testout
+  -  name: printing
+     debug:
+      msg: '{{testout}}'
